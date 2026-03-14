@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trade Decision Tool | Trading Basics Made Simple</title>
-  <meta name="description" content="Interactive beginner trade decision tool using indicators, patterns, and support or resistance logic." />
+  <meta name="description" content="Interactive beginner trade decision tool for patterns, indicators, and candlesticks with setup logic and entry points." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,17 +27,18 @@
     <div class="container content-page">
       <h1>Trade Decision Tool</h1>
       <p class="lead">
-        This tool walks through what you are seeing on the chart and asks follow-up questions based on your answers.
+        This tool walks through setup-specific questions to help beginners understand why a trade may be strong, weak, or worth waiting on.
       </p>
 
       <section class="result-box">
         <h2 id="question">What are you seeing?</h2>
-        <div id="answers" class="button-row"></div>
+        <p id="explanation" class="tool-explanation"></p>
+        <div id="answers"></div>
       </section>
 
       <section id="result" class="result-box" style="display:none;">
-        <h2>Result</h2>
-        <p id="result-text"></p>
+        <h2 id="result-title">Tool Outcome</h2>
+        <div id="result-text"></div>
         <button class="button" onclick="restartTool()">Start Over</button>
       </section>
     </div>
