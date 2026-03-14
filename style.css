@@ -189,9 +189,42 @@ a:hover { color: #ffe8bf; }
   .grid-3, .two-col { grid-template-columns: 1fr; }
   .hero { padding-top: 4rem; }
 }
+
 #answers {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.tool-explanation {
+  color: var(--muted);
+  margin: 0.75rem 0 1.25rem;
+  max-width: 750px;
+}
+
+/* progress bar */
+.tool-progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#tool-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4ea3ff;
+  transition: width 0.3s ease;
+}
+
+#result-text ul {
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+#result-text li {
+  margin-bottom: 0.35rem;
 }
