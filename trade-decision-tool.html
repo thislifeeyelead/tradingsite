@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trade Decision Tool | Trading Basics Made Simple</title>
-  <meta name="description" content="Simple beginner trade decision tool using pattern selection, trend direction, and indicator confirmation to organize trade ideas." />
+  <meta name="description" content="Interactive beginner trade decision tool using indicators, patterns, and support or resistance logic." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,40 +26,19 @@
   <main class="section">
     <div class="container content-page">
       <h1>Trade Decision Tool</h1>
-      <p class="lead">This tool is a simple structure helper for beginners. It does not tell you what will happen. It helps you slow down and check whether the trade idea actually has support.</p>
+      <p class="lead">
+        This tool walks through what you are seeing on the chart and asks follow-up questions based on your answers.
+      </p>
 
-      <form id="tradeForm" class="tool-form">
-        <label for="pattern">Pattern Selection</label>
-        <select id="pattern" name="pattern">
-          <option value="">Select a pattern</option>
-          <option value="Double Top">Double Top</option>
-          <option value="Head and Shoulders">Head and Shoulders</option>
-          <option value="Flag">Flag</option>
-          <option value="Triangle">Triangle</option>
-        </select>
+      <section class="result-box">
+        <h2 id="question">What are you seeing?</h2>
+        <div id="answers" class="button-row"></div>
+      </section>
 
-        <label for="trend">Trend Direction</label>
-        <select id="trend" name="trend">
-          <option value="">Select trend direction</option>
-          <option value="Uptrend">Uptrend</option>
-          <option value="Downtrend">Downtrend</option>
-          <option value="Sideways">Sideways</option>
-        </select>
-
-        <label for="indicator">Indicator Confirmation</label>
-        <select id="indicator" name="indicator">
-          <option value="">Select confirmation level</option>
-          <option value="Strong">Strong confirmation</option>
-          <option value="Partial">Partial confirmation</option>
-          <option value="None">No confirmation</option>
-        </select>
-
-        <button type="submit" class="button">Check Setup</button>
-      </form>
-
-      <section id="result" class="result-box" aria-live="polite">
-        <h2>Yes/No Outcome</h2>
-        <p>Choose a pattern, trend direction, and confirmation level to see a simple result.</p>
+      <section id="result" class="result-box" style="display:none;">
+        <h2>Result</h2>
+        <p id="result-text"></p>
+        <button class="button" onclick="restartTool()">Start Over</button>
       </section>
     </div>
   </main>

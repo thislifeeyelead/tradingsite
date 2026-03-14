@@ -189,3 +189,9 @@ a:hover { color: #ffe8bf; }
   .grid-3, .two-col { grid-template-columns: 1fr; }
   .hero { padding-top: 4rem; }
 }
+#answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
