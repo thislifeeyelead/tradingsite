@@ -1,3 +1,4 @@
+
 const questionEl = document.getElementById("question");
 const explanationEl = document.getElementById("explanation");
 const answersEl = document.getElementById("answers");
@@ -795,3 +796,8 @@ function finishDoji(nextCandle) {
 }
 
 startTool();
+function toggle(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
