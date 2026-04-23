@@ -1,209 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Indicators</title>
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: white;
-    margin: 0;
-    padding: 20px;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .indicator {
-    border: 1px solid #333;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background: #161616;
-    overflow: hidden;
-  }
-
-  .indicator-header {
-    padding: 15px;
-    cursor: pointer;
-    background: #1f1f1f;
-  }
-
-  .indicator-header:hover {
-    background: #2a2a2a;
-  }
-
-  .indicator-header h2 {
-    margin: 0;
-    font-size: 18px;
-  }
-
-  .indicator-content {
-    display: none;
-    padding: 15px;
-    border-top: 1px solid #333;
-  }
-
-  ul {
-    margin-top: 5px;
-  }
-
-  .label {
-    color: #aaa;
-    font-size: 13px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Indicators for Beginners | Trading Basics Made Simple</title>
+  <meta name="description" content="Beginner guide to trading indicators including MACD, RSI, moving averages, and Bollinger Bands with simple explanations." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<h1>Trading Indicators</h1>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Trading Basics Made Simple</a>
 
-<!-- MOVING AVERAGE -->
-<div class="indicator">
-  <div class="indicator-header" onclick="toggle('ma')">
-    <h2>Moving Average (MA)</h2>
-    <div class="label">When to use</div>
-  </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-trading.html">What Is Trading?</a></li>
+          <li><a href="indicators.html" aria-current="page">Indicators</a></li>
+          <li><a href="patterns-signals.html">Patterns & Signals</a></li>
+          <li><a href="trade-decision-tool.html">Trade Decision Tool</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div id="ma" class="indicator-content">
-    <p><strong>What it does:</strong> Shows trend direction by smoothing price.</p>
+  <!-- MAIN -->
+  <main class="section">
+    <div class="container content-page">
 
-    <p><strong>When to use:</strong></p>
-    <ul>
-      <li>Trending markets only</li>
-      <li>Confirm direction before entry</li>
-      <li>Find dynamic support/resistance</li>
-    </ul>
+      <h1>Indicators</h1>
 
-    <p><strong>Best pairings:</strong> RSI, MACD, Price action</p>
+      <p class="lead">
+        Indicators are tools that help you read momentum, direction, and volatility. They don’t predict the future — they help you understand what price is already doing.
+      </p>
 
-    <p><strong>Entry ideas:</strong></p>
-    <ul>
-      <li>Buy: pullback to MA in uptrend</li>
-      <li>Sell: rejection in downtrend</li>
-      <li>Stronger if MA is sloping clearly</li>
-    </ul>
+      <!-- INDICATORS LIST -->
+      <div class="indicator-list">
 
-    <p><strong>Avoid:</strong> sideways markets, blind touches of MA</p>
-  </div>
-</div>
+        <!-- MACD -->
+        <div class="indicator-card">
+          <div class="indicator-title" onclick="toggle('macd')">
+            <h2>MACD</h2>
+            <span>click to expand</span>
+          </div>
 
-<!-- RSI -->
-<div class="indicator">
-  <div class="indicator-header" onclick="toggle('rsi')">
-    <h2>RSI</h2>
-    <div class="label">Momentum indicator</div>
-  </div>
+          <div id="macd" class="indicator-body">
+            <p>MACD compares short-term and long-term momentum to show trend shifts.</p>
 
-  <div id="rsi" class="indicator-content">
-    <p><strong>What it does:</strong> Measures momentum (overbought/oversold).</p>
+            <p><strong>Best use:</strong> momentum shifts + trend confirmation</p>
+            <p><strong>Pairs with:</strong> Moving Averages, RSI</p>
 
-    <p><strong>When to use:</strong></p>
-    <ul>
-      <li>Spot reversals</li>
-      <li>Confirm momentum in trends</li>
-    </ul>
+            <p><strong>Entry ideas:</strong></p>
+            <ul>
+              <li>Buy when MACD crosses up in bullish structure</li>
+              <li>Sell when MACD crosses down in bearish structure</li>
+            </ul>
+          </div>
+        </div>
 
-    <p><strong>Best pairings:</strong> MA, MACD, support/resistance</p>
+        <!-- MOVING AVERAGE -->
+        <div class="indicator-card">
+          <div class="indicator-title" onclick="toggle('ma')">
+            <h2>Moving Averages</h2>
+            <span>click to expand</span>
+          </div>
 
-    <p><strong>Entry ideas:</strong></p>
-    <ul>
-      <li>Buy: RSI under 30 at support</li>
-      <li>Sell: RSI above 70 at resistance</li>
-    </ul>
+          <div id="ma" class="indicator-body">
+            <p>Moving averages smooth price to show trend direction.</p>
 
-    <p><strong>Avoid:</strong> using it alone</p>
-  </div>
-</div>
+            <p><strong>Best use:</strong> trend direction + dynamic support/resistance</p>
+            <p><strong>Pairs with:</strong> RSI, MACD, price action</p>
 
-<!-- MACD -->
-<div class="indicator">
-  <div class="indicator-header" onclick="toggle('macd')">
-    <h2>MACD</h2>
-    <div class="label">Trend + momentum</div>
-  </div>
+            <p><strong>Entry ideas:</strong></p>
+            <ul>
+              <li>Buy pullbacks in uptrend above MA</li>
+              <li>Sell rejections in downtrend below MA</li>
+            </ul>
+          </div>
+        </div>
 
-  <div id="macd" class="indicator-content">
-    <p><strong>What it does:</strong> Shows momentum shifts using moving averages.</p>
+        <!-- RSI -->
+        <div class="indicator-card">
+          <div class="indicator-title" onclick="toggle('rsi')">
+            <h2>RSI</h2>
+            <span>click to expand</span>
+          </div>
 
-    <p><strong>When to use:</strong></p>
-    <ul>
-      <li>Trend confirmation</li>
-      <li>Momentum shifts</li>
-    </ul>
+          <div id="rsi" class="indicator-body">
+            <p>RSI measures momentum strength and exhaustion levels.</p>
 
-    <p><strong>Best pairings:</strong> MA, RSI, structure</p>
+            <p><strong>Best use:</strong> spotting overbought/oversold conditions</p>
+            <p><strong>Pairs with:</strong> support/resistance, MA</p>
 
-    <p><strong>Entry ideas:</strong></p>
-    <ul>
-      <li>Buy: MACD crosses up</li>
-      <li>Sell: MACD crosses down</li>
-    </ul>
+            <p><strong>Entry ideas:</strong></p>
+            <ul>
+              <li>Buy near 30 at support</li>
+              <li>Sell near 70 at resistance</li>
+            </ul>
+          </div>
+        </div>
 
-    <p><strong>Avoid:</strong> choppy markets</p>
-  </div>
-</div>
+        <!-- BOLLINGER BANDS -->
+        <div class="indicator-card">
+          <div class="indicator-title" onclick="toggle('bb')">
+            <h2>Bollinger Bands</h2>
+            <span>click to expand</span>
+          </div>
 
-<!-- VWAP -->
-<div class="indicator">
-  <div class="indicator-header" onclick="toggle('vwap')">
-    <h2>VWAP</h2>
-    <div class="label">Institutional level</div>
-  </div>
+          <div id="bb" class="indicator-body">
+            <p>Measures volatility and price expansion/contraction.</p>
 
-  <div id="vwap" class="indicator-content">
-    <p><strong>What it does:</strong> Shows average price weighted by volume.</p>
+            <p><strong>Best use:</strong> breakouts and reversals</p>
+            <p><strong>Pairs with:</strong> RSI, volume</p>
 
-    <p><strong>When to use:</strong> Intraday trading only</p>
+            <p><strong>Entry ideas:</strong></p>
+            <ul>
+              <li>Squeeze → breakout expansion</li>
+              <li>Rejections at bands in trend direction</li>
+            </ul>
+          </div>
+        </div>
 
-    <p><strong>Best pairings:</strong> volume, price action</p>
+      </div>
 
-    <p><strong>Entry ideas:</strong></p>
-    <ul>
-      <li>Buy: reclaim VWAP</li>
-      <li>Sell: lose VWAP</li>
-    </ul>
+      <!-- FOOTER NOTE -->
+      <div class="content-block">
+        <h2>Indicator Confirmation</h2>
+        <p>
+          Indicators work best when they agree with price action. Combine structure + trend + indicator confirmation for stronger setups.
+        </p>
 
-    <p><strong>Avoid:</strong> using on high timeframes</p>
-  </div>
-</div>
+        <p class="jump-links">
+          Next: <a href="patterns-signals.html">Patterns & Signals</a> or try the
+          <a href="trade-decision-tool.html">Trade Decision Tool</a>.
+        </p>
+      </div>
 
-<!-- BOLLINGER BANDS -->
-<div class="indicator">
-  <div class="indicator-header" onclick="toggle('bb')">
-    <h2>Bollinger Bands</h2>
-    <div class="label">Volatility indicator</div>
-  </div>
+    </div>
+  </main>
 
-  <div id="bb" class="indicator-content">
-    <p><strong>What it does:</strong> Measures volatility and price extremes.</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Trading Basics Made Simple</p>
+      <p><a href="what-is-trading.html">Read Market Basics</a></p>
+    </div>
+  </footer>
 
-    <p><strong>When to use:</strong> breakouts or reversals</p>
-
-    <p><strong>Best pairings:</strong> RSI, volume</p>
-
-    <p><strong>Entry ideas:</strong></p>
-    <ul>
-      <li>Buy: bounce off lower band in uptrend</li>
-      <li>Sell: rejection from upper band in downtrend</li>
-      <li>Breakout: tight squeeze → expansion</li>
-    </ul>
-
-    <p><strong>Avoid:</strong> assuming bands always mean reversal</p>
-  </div>
-</div>
-
-<script>
-function toggle(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === "block" ? "none" : "block";
-}
-</script>
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
