@@ -375,3 +375,40 @@ h3 {
     padding-top: 4rem;
   }
 }
+.indicator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.indicator-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.indicator-title {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indicator-title h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.indicator-title span {
+  font-size: 12px;
+  color: #777;
+}
+
+.indicator-body {
+  display: none;
+  padding: 12px;
+  border-top: 1px solid #eee;
+}
